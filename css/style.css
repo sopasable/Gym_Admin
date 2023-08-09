@@ -1,0 +1,48 @@
+:root{
+    --primario: #000000;
+    --Secundario: #0da7eb;
+    --terciario: #1e90ff;
+    --cuaternario:#0f151c;
+    --fondo:#ffffff;
+}
+
+html{
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+*,*::before,*::after{
+    box-sizing: inherit;
+}
+
+/* Globales */
+body{
+    background-color: var(--fondo);
+    font-size: 1.6rem;
+    line-height: 1.5;
+}
+
+nav{
+
+}
+
+main{
+
+}
+
+aside{
+
+}
+
+/*Clases Globales Utiles*/
+.CentrarFlex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+/* Inicio Sesión */
+.IS{
+    background-color: var(--fondo);
+}
