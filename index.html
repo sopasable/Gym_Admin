@@ -52,6 +52,32 @@
     transition: all 0.5s;
 }
 
+/* Sidebar Ordered List*/
+.Side_Opciones{
+  margin: 0;
+  padding: 0;
+}
+
+.Side_Opcion{
+  display: flex;
+  align-items: center;
+  list-style: none;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 1rem 0.5rem 1rem 2rem;
+}
+
+.Side_Opcion:hover{
+  cursor: pointer;
+  background-color: #172c3a;
+}
+
+.Opcion_Icono{
+  margin-right: 1rem;
+}
+
+
 
 /*Botones*/
 
@@ -104,7 +130,7 @@
 }
 
 .active .icon {
-  width: 40%;
+  width: 30%;
 }
 
 .active .text {
@@ -118,6 +144,13 @@
 
 .btn-sidebar:active .icon {
   transform: scale(0.85);
+}
+/* Imagenes/logos */
+.LogoGym{
+  display: flex;
+  padding: 1rem;
+  align-items: center;
+  justify-content: center;
 }
 
 </style>
@@ -136,7 +169,32 @@
             
         </footer>
         <aside class="GYMAIN_Side">
-            
+          <div class="Side_Logo"> 
+            <a class="LogoGym" href="index.html">
+              <img src="img/Gym-logosvg.svg" alt="Logo Gym" width="40%"></img>
+            </a> 
+          </div>
+          <div class="Side_Lista">
+            <ul class="Side_Opciones">
+              <li class="Side_Opcion">
+                <i class="Opcion_Icono fas fa-chart-pie"></i>
+                Estadisticas
+              </li>
+              <li class="Side_Opcion">
+                <i class="Opcion_Icono fas fa-users"></i>
+                Miembros
+              </li>
+              <li class="Side_Opcion">
+                <i class="Opcion_Icono fas fa-money-bill-wave"></i>
+                Pagos
+              </li>
+              <li class="Side_Opcion">
+                <i class="Opcion_Icono fas fa-address-card"></i>
+                Suscripciones
+              </li>
+            </ul>
+          </div>
+
         </aside>
     </section>
 
