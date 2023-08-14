@@ -16,10 +16,11 @@ html{
 }
 
 /* Globales */
-body{
-    background-color: var(--fondo);
-    font-size: 1.6rem;
-    line-height: 1.5;
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 nav{
@@ -42,7 +43,4 @@ aside{
 
 }
 
-/* Inicio Sesión */
-.IS{
-    background-color: var(--fondo);
-}
+/* >>> [[Clases y estilos Inicio Sesión]] <<< */

@@ -9,22 +9,158 @@
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
-<body class="GYMMAIN">
-    <nav class="GYMAIN_Nav">
-        
-    </nav>
-    <aside class="GYMAIN_Side">
-       
-    </aside>
-    <main class="GYMAIN_Main">
-        
-    </main>
+<style>
+/*--------------------Cuerpos div--------------------*/
+/* Clases y estilos Divs cuerpo */
+.GYMMAIN {
+    display: grid;
+    grid-template-rows: 0.1fr 1fr 0.1fr; /* 10px para nav y footer, 1fr para body */
+    grid-template-columns: 100%; /* Ancho del 100% para todas las columnas */
+    height: 100%;
+}
+
+.GYMAIN_Nav {
+    background-color: #040f16;
+    color: #fff;
+    padding: 5px 20px;
+}
+
+.GYMAIN_Body {
+    background-color: #f5f5f5;
+    padding: 20px;
+}
+
+.GYMMAIN_Footer {
+    background-color: #333;
+    color: #fff;
+    padding: 5px 20px;
+}
+
+/*--------------------ELEMENTOS--------------------*/
+/* Sidebar */
+.GYMAIN_Side {
+    height: 100vh;
+    width: 30vh;
+    position: fixed;
+    left: -315px;
+    transition: all 0.3s;
+    background-color: #040f16;
+}
+.GYMAIN_Side.active {
+    position: fixed;
+    left: 0;
+    transition: all 0.5s;
+}
+
+
+/*Botones*/
+
+.btn-sidebar {
+  width: 150px;
+  height: 50px;
+  border-radius: 5px;
+  border: none;
+  transition: all 0.5s ease-in-out;
+  font-size: 20px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  background: #040f16;
+  color: #f5f5f5;
+}
+
+.btn-sidebar {
+  width: 150px;
+  height: 50px;
+  border-radius: 5px;
+  border: none;
+  transition: all 0.5s ease-in-out;
+  font-size: 20px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  background: #040f16;
+  color: #f5f5f5;
+}
+
+.active {
+  box-shadow: 0 0 20px 0px #2e2e2e3a;
+}
+
+.btn-sidebar .icon {
+  position: absolute;
+  height: 40px;
+  width: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.5s;
+}
+
+.btn-sidebar .text {
+    transition: all 2s;
+    transform: translateX(55px);
+}
+
+.active .icon {
+  width: 40%;
+}
+
+.active .text {
+  transition: all 0.5s;
+  opacity: 0;
+}
+
+.btn-sidebar:focus {
+  outline: none;
+}
+
+.btn-sidebar:active .icon {
+  transform: scale(0.85);
+}
+
+</style>
+
+<body>
+
+    <section class="GYMMAIN">
+
+        <nav class="GYMAIN_Nav">
+            <button class="btn-sidebar"> <span class="icon"> <svg viewBox="0 0 175 80" width="40" height="40"> <rect width="80" height="15" fill="#f0f0f0" rx="10"></rect> <rect y="30" width="80" height="15" fill="#f0f0f0" rx="10"></rect> <rect y="60" width="80" height="15" fill="#f0f0f0" rx="10"></rect> </svg> </span> <span class="text">MENU</span> </button>
+        </nav>
+        <main class="GYMAIN_Body">
+            
+        </main>
+        <footer class="GYMMAIN_Footer">
+            
+        </footer>
+        <aside class="GYMAIN_Side">
+            
+        </aside>
+    </section>
 
 </body>
 <script src="js/script.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
 <!-- Bootstrap -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <!-- Fontawesome -->
 <script src="https://kit.fontawesome.com/20d4c99325.js" crossorigin="anonymous"></script>
+<script>
+    $(".btn-sidebar").on("click",function(){
+        if ($(this).hasClass("active")){
+            $(this).removeClass("active");
+            $(".GYMAIN_Side").removeClass("active");
+        } 
+        else {
+            $(this).addClass("active");
+            $(".GYMAIN_Side").addClass("active");
+        
+        }
+    });
+
+
+</script>
 </html>
